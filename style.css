@@ -6,64 +6,95 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 0;
-  background: #121212;
-  color: #eee;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0e7ff;
   line-height: 1.6;
 }
 a {
-  color: #4db8ff;
+  color: #a18cd1;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
+  color: #f9a8d4;
   text-decoration: underline;
 }
 .container {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  background: rgba(24, 26, 43, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(161, 140, 209, 0.7);
 }
 h1, h2, h3 {
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 8px rgba(161, 140, 209, 0.8);
 }
 h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: #c084fc; /* bright purple */
+  margin-bottom: 0.5rem;
 }
 h2 {
-  font-size: 1.75rem;
-  border-bottom: 2px solid #4db8ff;
-  padding-bottom: 0.25rem;
-  margin-top: 2rem;
+  font-size: 2rem;
+  border-bottom: 3px solid #a78bfa;
+  padding-bottom: 0.4rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
+  color: #d8b4fe;
 }
 h3 {
-  font-size: 1.2rem;
-  margin-top: 1rem;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #c4b5fd;
 }
 .contact-links a {
   display: inline-block;
-  margin-right: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.7rem;
   font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  box-shadow: 0 0 8px #a78bfa;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-links a:hover {
+  background: linear-gradient(90deg, #c084fc, #a78bfa);
+  box-shadow: 0 0 12px #d8b4fe;
+  color: #fff;
 }
 .contact-links span {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   font-weight: 600;
+  color: #a78bfa;
+  text-shadow: 0 0 6px #a78bfa;
 }
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 ul {
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
 }
 ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #a78bfa;
+  text-shadow: 0 0 4px #c4b5fd;
 }
 .skills-list {
   columns: 2;
-  column-gap: 2rem;
+  column-gap: 2.5rem;
 }
 @media (max-width: 600px) {
   .skills-list {
